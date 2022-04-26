@@ -9,7 +9,7 @@ EXIT STATUS
     >0  An error occurred.
 
 Usage:
-  DomainInvestigator (-d DOMAIN | -i INPUT_FILE)[--enumerate_subdomains][--bruteforce][-o OUTPUT_FILE][--log-level=LEVEL][-f OUTPUT_FILE_TYPE]
+  DomainInvestigator (-d DOMAIN | -i INPUT_FILE)[--enumerate_subdomains [--bruteforce]][-o OUTPUT_FILE][--log-level=LEVEL][-f OUTPUT_FILE_TYPE]
   DomainInvestigator (-h | --help)
 
 Options:
@@ -263,6 +263,8 @@ def main() -> None:
                     error="Input file doesn't exist!",
                 ),
             ),
+            "--enumerate_subdomains": bool,
+            "--bruteforce": Or(False, And(True, args["--enumerate_subdomains"], error="Bruteforce requires --enumerate_subdomains option")),
             "-o": Or(None, str),
             "-d": Or(None, str),
             str: object,  # Don't care about other keys, if any
