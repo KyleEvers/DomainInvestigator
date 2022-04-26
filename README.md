@@ -23,9 +23,9 @@ python DomainInvestigator.py -i domains.txt -o sample_domains_output --log-level
 python DomainInvestigator.py -i domains.txt --enumerate_subdomains
 ```
 
-![DomainInvestigator](./media/DomainInvestigator.gif)
+![](./media/DomainInvestigator.gif)
 
-![DomainInvestigator2](./media/DomainInvestigator2.gif)
+![](./media/DomainInvestigator2.gif)
 
 #### Options ####
 
