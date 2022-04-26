@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```bash
 python DomainInvestigator.py -d example.com
 python DomainInvestigator.py -d example.com --enumerate_subdomains -o examplescope -f csv
-python DomainInvestigator.py -d example.com --enumerate_subdomains --bruteforce -o cisascope -f json
+python DomainInvestigator.py -d example.com --enumerate_subdomains --bruteforce -o samplescope -f json
 
 python DomainInvestigator.py -i domains.txt -o sample_domains_output --log-level info
 python DomainInvestigator.py -i domains.txt --enumerate_subdomains
